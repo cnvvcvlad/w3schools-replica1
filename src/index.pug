@@ -1,20 +1,36 @@
 doctype html
 html(lang="en")
   head
-    title Welcome to Pug Starter
-    meta(content="Simple pug (jade) starter aimed to quickly deliver HTML & CSS projects" name="description")
-    //- this checks to see the the "embed" property is set to "true"
-    //- in the package.json file
-    if config.entry.css.embed
-      link(rel="stylesheet" href=`${embedPath}` inline)
+    title Apprendre le code HTML, CSS et JavaScript
+    meta(name="description", content="This is a HTML replica of w3schools.com")
+    link(rel="stylesheet", href="style.css")
   body
-    h1 Welcome to pug-starter! #{config.lang} :)
-    p This is a barebone setup.
-    p You are currently on master branch.
-    p If you want to see a full example of what pug starter offers out of the box use:
-    p 
-      b git checkout example
-    //- The style.css is at the bottom so it doesn't
-    //- block the loading of assets
-    if config.entry.css.external
-      link(rel="stylesheet", href=`${baseUrl}/style.css`)
+    header
+      a.current(href="/") Home
+      a(href="/html") HTML
+      a(href="/css") CSS
+      a(href="/javascript") JavaScript
+
+
+    article
+      h1 C'est une copie de w3schools.com
+      p Je passerai en revue tous les éléments HTML possibles ainsi que les CSS pour acquérir des connaissances plus rapidement et m'habituer à l'écriture et à la production de pages HTML stylisées. 
+      h2 HTML
+      p Le langage pour construire des pages Web. #[a(href="/html") Vérifiez-le]
+      h2 CSS  
+      p Le langage pour le style des pages Web. #[a(href="/css") Regardez-le]
+      h2 JavaScript
+      p Le langage de programmation des pages Web. #[a(href="/javascript") Découvrez-le]
+
+    nav
+      h3 HTML et CSS
+      a(href="/html") Apprendre HTML 
+      a(href="/css") Apprendre CSS
+      a(href="/javascript") Apprendre JavaScript
+
+    footer &copy; 2019 Je m'appele Vladislav!
+        
+
+      
+      
+      
